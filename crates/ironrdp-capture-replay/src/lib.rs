@@ -14,6 +14,7 @@ pub use error::ReplayError;
 pub use negotiation::{NegotiatedState, StaticChannel, recover_negotiated_state};
 pub use output::{ExportError, ExportOptions, ExportSummary, export_capture};
 pub use routing::{
-    CapturedActivation, CapturedDynamicChannel, ReplayDirection, ReplayEvent, ReplayGap, ReplayGapKind, ReplayReport,
-    ReplayRoute, ReplayRouter, replay_capture,
+    CapturedActivation, CapturedDynamicChannel, PreparedReplay, ReplayDirection, ReplayEvent, ReplayExecution,
+    ReplayGap, ReplayGapKind, ReplayLifecycle, ReplayOptions, ReplayOutcome, ReplayReport, ReplayRoute, ReplayRouter,
+    ReplaySummary, prepare_capture, replay_capture,
 };
