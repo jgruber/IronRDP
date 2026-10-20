@@ -37,6 +37,9 @@ pub enum CaptureError {
     /// The capture requires unsupported TLS 1.3 key rotation.
     #[error("capture uses unsupported TLS 1.3 key rotation")]
     TlsKeyUpdate,
+    /// The gateway tunnel was decoded but carries no RDP stream.
+    #[error("gateway tunnel does not contain RDP data")]
+    MissingTunneledRdp,
     /// The gateway tunnel framing is incomplete or malformed.
     #[error("capture gateway tunnel framing is invalid: {0}")]
     GatewayFraming(String),
